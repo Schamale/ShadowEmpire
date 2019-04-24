@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ShadowEmpire;
 
 namespace ShadowEmpire.EnemyScripts
 {
@@ -8,7 +9,8 @@ namespace ShadowEmpire.EnemyScripts
     {
         #region Variables
         public int m_health;
-        public float m_speed;
+        //public float m_speed;
+        public int baseAttack;
 
         private Animator anim;
         #endregion
@@ -17,14 +19,14 @@ namespace ShadowEmpire.EnemyScripts
         // Use this for initialization
         void Start()
         {
-            anim = GetComponent<Animator>();
-            anim.SetBool("isRunning", true);
+            //anim = GetComponent<Animator>();
+            //anim.SetBool("isRunning", true);
         }
 
         // Update is called once per frame
         void Update()
         {
-            transform.Translate(Vector2.left * m_speed * Time.deltaTime);
+            //transform.Translate(Vector2.left * m_speed * Time.deltaTime);
             if (m_health <= 0)
             {
                 Destroy(gameObject);
