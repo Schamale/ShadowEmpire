@@ -17,6 +17,7 @@ namespace ShadowEmpire.Player
         public float speed;
         public bool facingRight = true;
         public PlayerState currentState;
+        public AudioSource swordSlash;
 
         private bool m_attack;
         private bool m_attack2;
@@ -119,6 +120,7 @@ namespace ShadowEmpire.Player
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 m_attack = true;
+                swordSlash.Play();
             }
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
